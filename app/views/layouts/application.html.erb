@@ -7,9 +7,211 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
   <body>
-    <%= yield %>
+     <!-- Header Area Start -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+              
+                <!-- Logo link for index page needed here -->
+                
+                <a class="nav-brand" href="#">ChatNoir</a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="#">Shop</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Posters</a></li>
+                                    <li><a href="#">Illustrations</a></li>
+                                    <li><a href="#">Woodblock Prints</a></li>
+                                </ul>
+                            </li>
+                            <li><%= link_to "About", pages_about_path%></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <!-- Search Area -->
+                <div class="search-area">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                  
+                    <a href="#"><%= image_tag "core-img/user.svg" %></a>
+                </div>
+                <!-- Cart Area -->
+                <div class="cart-area">
+                    <a href="#" id="essenceCartBtn"><%= image_tag "core-img/bag.svg" %><span>3</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Right Side Cart Area ##### -->
+    <div class="cart-bg-overlay"></div>
+
+    <div class="right-side-cart-area">
+
+        <!-- Cart Button -->
+        <div class="cart-button">
+            <a href="#" id="rightSideCart"><%= image_tag "core-img/bag.svg" %><span>3</span></a>
+        </div>
+
+        <div class="cart-content d-flex">
+
+            <!-- Cart List Area -->
+            <div class="cart-list">
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                      <%= image_tag "product-img/product-1.jpg" %>
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <%= image_tag "product-img/product-1.jpg" %>
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Single Cart Item -->
+                <div class="single-cart-item">
+                    <a href="#" class="product-image">
+                        <%= image_tag "product-img/product-1.jpg" %>
+                        <!-- Cart Item Desc -->
+                        <div class="cart-item-desc">
+                          <span class="product-remove"><i class="fa fa-close" aria-hidden="true"></i></span>
+                            <span class="badge">Mango</span>
+                            <h6>Button Through Strap Mini Dress</h6>
+                            <p class="size">Size: S</p>
+                            <p class="color">Color: Red</p>
+                            <p class="price">$45.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-amount-summary">
+
+                <h2>Summary</h2>
+                <ul class="summary-table">
+                    <li><span>subtotal:</span> <span>$274.00</span></li>
+                    <li><span>delivery:</span> <span>Free</span></li>
+                    <li><span>discount:</span> <span>-15%</span></li>
+                    <li><span>total:</span> <span>$232.00</span></li>
+                </ul>
+                <div class="checkout-btn mt-100">
+                    <a href="checkout.html" class="btn essence-btn">check out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Right Side Cart End ##### -->
+    <div class="container">
+      
+        <%= yield %>
+        
+    </div>
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area d-flex mb-30">
+                        <!-- Logo -->
+                        <div class="footer-logo mr-50">
+                            <a href="#" style="color:white;font-size:18px;">ChatNoir</a>
+                        </div>
+                        <!-- Footer Menu -->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="shop.html">Shop</a></li>
+                                 <li><%= link_to "About", pages_about_path%></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-end">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_social_area">
+                            <%= link_to 'https://www.facebook.com', target: 'blank' do %><%= fa_icon "facebook" %><% end %>
+                            <%= link_to 'https://www.instagram.com/', target: 'blank' do %><%= fa_icon "instagram" %><% end %>
+                            <%= link_to 'https://www.twitter.com', target: 'blank' do %><%= fa_icon "twitter" %><% end %>
+                            <%= link_to 'https://www.pinterest.com', target: 'blank' do %><%= fa_icon "pinterest" %><% end %>
+                            <%= link_to 'https://www.youtube.com', target: 'blank' do %><%= fa_icon "youtube-play" %><% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+     <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                    <p>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> ChatNoir 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="../assets/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../assets/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../assets/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../assets/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="../assets/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="../assets/active.js"></script>
+    </footer>
   </body>
 </html>
