@@ -31,3 +31,9 @@
 
 en:
   hello: "Hello world"
+  
+#  en: 
+#     faker:
+#         chatnoir:
+#             # variant_option: [10x20, 20x30, 30x40]
+#             order_status: [pending, complete, delivered]
