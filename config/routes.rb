@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   
   # namespace for admin routes
   namespace :admin do
+    # admin dashboard route
+    get 'dashboard', to: 'dashboard#home'
+    
     resources :products
     # resources :orders
     # resources :users

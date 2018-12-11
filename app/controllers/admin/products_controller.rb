@@ -1,5 +1,29 @@
 class Admin::ProductsController < Admin::BaseController
     def index
-        @products = Product.all
+        @products = Product.all 
+    end
+    
+    def create
+
+    end
+    
+    def new
+        
+    end
+    
+    def edit
+        
+    end
+    
+    def show
+        
+    end
+    
+    def update
+        
+    end
+    
+    def destroy
+        
     end
 end
