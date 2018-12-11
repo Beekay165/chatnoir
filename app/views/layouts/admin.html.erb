@@ -229,24 +229,24 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <%= link_to admin_dashboard_path, class: "nav-link" do %>
               <i class="menu-icon mdi mdi-television"></i>
               <span class="menu-title">Dashboard</span>
-            </a>
+            <% end %>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Basic UI Elements</span>
+              <span class="menu-title">Products</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                  <%= link_to "Index", admin_products_path, class: "nav-link" %>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/ui-features/typography.html">Typography</a>
+                  <%= link_to "Add Product", new_admin_product_path, class: "nav-link" %>
                 </li>
               </ul>
             </div>

@@ -1,0 +1,49 @@
+<% title "Create New Product" %>
+
+<div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add Product</h4>
+                  <p class="card-description">
+                    Use the form below to add information about the product 
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="description">Description</label>
+                      <textarea class="form-control" id="description" rows="20"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="stock">Stock</label>
+                      <input type="number" class="form-control" id="stock" placeholder="0" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend bg-primary border-primary">
+                            <span class="input-group-text bg-transparent text-white">€</span>
+                          </div>
+                          <input type="text" class="form-control" id="price">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="artist">Artist Name</label>
+                      <input type="text" class="form-control" id="artist" placeholder="Artist Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="image">Select Image</label>
+                      <input type="file" class="form-control-file" id="image">
+                    </div>
+                    <div class="form-group">
+                      <label for="sku">SKU</label>
+                      <input type="text" class="form-control" id="sku" placeholder="SKU">
+                    </div>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
+                </div>
+              </div>
+            </div>
