@@ -48,8 +48,8 @@
                                   <%= order.created_at.strftime("%b %e, %Y") %>
                                 </td>
                                 <td>
-                                  <%= link_to edit_admin_order_path(order.id)  do %>
-                                  Edit
+                                  <%= link_to admin_order_path(order.id)  do %>
+                                  View
                                   <% end %>
                                 </td>
                             </tr>

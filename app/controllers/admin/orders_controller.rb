@@ -20,7 +20,7 @@ class Admin::OrdersController < Admin::BaseController
 
   # GET /admin/orders/1/edit
   def edit
-     @order = Order.find(params[:id])
+    @order = Order.find(params[:id])
     # @user = User.find(params[:Order.user_id])
   end
 
