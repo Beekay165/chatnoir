@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#home'
     
     resources :products
-    # resources :orders
+    resources :orders
     # resources :users
     # resources :product
   end
