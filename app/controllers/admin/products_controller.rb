@@ -7,8 +7,15 @@ class Admin::ProductsController < Admin::BaseController
         # render plain: params[:product].inspect
         @product = Product.new(product_params)
         @product.save
-        redirect_to edit_admin_product_path(@product)
+       
         
+        if @product.save 
+            # do something
+            flash[:notice] = "Product was successfully created"
+            redirect_to edit_admin_product_path(@product)
+        else
+           render 'new' 
+        end
 
         # respond_to do |format|
         #   if @product.save
