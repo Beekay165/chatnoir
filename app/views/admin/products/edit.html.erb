@@ -1,49 +1,50 @@
-<% title "Edit Product" %>
+<% title "Edit " + @product.name  %>
 
 <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Edit Product</h4>
+                  <h4 class="card-title">Edit <%= @product.name %></h4>
                   <p class="card-description">
-                    Use the form below to edit information about the product 
+                    Use the form below to edit information about the <%= @product.name %> 
                   </p>
-                  <form class="forms-sample">
+                  <%= form_for [:admin, @product], class: "forms-sample"  do |f| %>
                     <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Name">
+                      <%= f.label :name %>
+                      <%= f.text_field :name, class: "form-control" %>
                     </div>
                     <div class="form-group">
-                      <label for="description">Description</label>
-                      <textarea class="form-control" id="description" rows="20"></textarea>
+                      <%= f.label :description %>
+                      <%= f.text_area :description, class: "form-control", size: "20" %>
                     </div>
                     <div class="form-group">
-                      <label for="stock">Stock</label>
-                      <input type="number" class="form-control" id="stock" placeholder="0" min="0">
+                      <%= f.label :stock %>
+                      <%= f.number_field :stock, class: "form-control", min:0, step: 1 %>
                     </div>
                     <div class="form-group">
-                        <label for="price">Price</label>
+                        <%= f.label :price %>
                         <div class="input-group">
                           <div class="input-group-prepend bg-primary border-primary">
                             <span class="input-group-text bg-transparent text-white">€</span>
                           </div>
-                          <input type="text" class="form-control" id="price">
+                          <%= f.text_field :price, class: "form-control" %>
                         </div>
                     </div>
                     <div class="form-group">
-                      <label for="artist">Artist Name</label>
-                      <input type="text" class="form-control" id="artist" placeholder="Artist Name">
+                      <%= f.label :artist_name %>
+                      <%= f.text_field :artist_name, class: "form-control" %>
                     </div>
                     <div class="form-group">
-                      <label for="image">Select Image</label>
-                      <input type="file" class="form-control-file" id="image">
+                      <%= f.label :image %>
+                      <%= f.file_field :image, class: "form-control" %>
                     </div>
                     <div class="form-group">
-                      <label for="sku">SKU</label>
-                      <input type="text" class="form-control" id="sku" placeholder="SKU">
+                      <%= f.label :sku, "SKU" %>
+                      <%= f.text_field :sku, class: "form-control" %>
                     </div>
-                    <button type="submit" class="btn btn-success mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                  </form>
+                    
+                    <%= f.submit class: "btn btn-success mr-2" %>
+                    
+                  <% end %>
                 </div>
               </div>
             </div>

@@ -36,7 +36,11 @@
                         <% @products.each do |product| %>
                               <tr>
                                 <td>
-                                  <%= image_tag product.image %>
+                                  <% if product.image.blank? %>
+                                    <%= image_tag product.image %>
+                                  <% else %>
+                                    <%= image_tag "https://image.jimcdn.com/app/cms/image/transf/none/path/s8e84ffc7090a5bd2/image/i9eed849b0f18dd36/version/1534159621/image.png" %>
+                                  <% end %> 
                                 </td>
                                 <td>
                                   <%= product.name %>
