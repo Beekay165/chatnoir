@@ -65,3 +65,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "font-awesome-rails"
 gem 'autoprefixer-rails'
+
+group :development do
+  gem 'guard-livereload', '~> 2.5', require: false
+end

@@ -61,4 +61,5 @@ Rails.application.configure do
   
   #Faker gem configuration
   # Faker::Config.locale = 'en'
+  
 end
