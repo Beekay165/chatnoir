@@ -34,6 +34,8 @@ guard 'livereload' do
 
   watch(%r{app/views/.+\.(erb|haml|slim)})
 
+  watch(%r{app/controllers/admin/.+\.(erb|haml|slim)})
+
   # file types LiveReload may optimize refresh for
   compiled_exts = extensions.values.uniq
   watch(%r{public/.+\.(#{compiled_exts * '|'})})
