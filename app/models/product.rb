@@ -9,4 +9,8 @@ class Product < ApplicationRecord
     # association with categories through our join table product_categories
     has_many :product_categories
     has_many :categories, through: :product_categories
+
+    # association with variants through our join table product_variants
+    has_many :product_variants
+    has_many :variants, through: :product_variants
 end

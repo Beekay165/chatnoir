@@ -35,6 +35,14 @@
     <% end %>
 </div>
 <div class="form-group">
+    <%= f.label :variants %>
+    <%= f.collection_check_boxes :variant_ids, Variant.all, :id, :option do |cb| %>
+    <% cb.label(class: "form-check-label", style: "display:block; margin-bottom:10px;") do %>
+    <%= cb.check_box + cb.text %>
+    <% end %>
+    <% end %>
+</div>
+<div class="form-group">
     <%= f.label :artist_name %>
     <%= f.text_field :artist_name, class:
           "form-control" %>

@@ -9,7 +9,7 @@
 order_count = 20
 product_count = 20
 category_count = 4
-product_variants_count = 10
+variant_count = 10
 
 # create the categories
 category_count.times do
@@ -58,16 +58,22 @@ product_count.times do
 end
 
 # create the product variants
-product_variants_count.times do 
-    ProductVariant.create(
-        variant: 'Size',
-        # description: Faker::Variant.option,
-        description: Faker::Commerce.material,
+variant_count.times do 
+    Variant.create(
+        name: 'Material',
+        option: Faker::Commerce.material,
         price: Faker::Commerce.price,
         stock: Faker::Number.between(1, 50),
         image: Faker::LoremFlickr.image("1000x1365", ['painting']), 
         sku: Faker::Lorem.characters(10),
+    )
+end
+
+# create the product variant relationships
+product_count.times do
+    ProductVariant.create(
         product_id: Faker::Number.between(1, product_count),
+        variant_id: Faker::Number.between(1, variant_count)
     )
 end
 
@@ -79,7 +85,6 @@ order_count.times do
         delivery_address: Faker::Address.full_address,
         payment_method: 'Credit Card',
         note: Faker::Lorem.paragraph,
-        # status: Faker::Order.status,
         status: 'complete',
         # user seeders to be created
         user_id: 1 
@@ -97,7 +102,8 @@ order_count.times do
     end
     
     OrderItem.create(
-        order_id: order,
+        quantity: 1,
+        order_id: Faker::Number.between(1, order_count),
         product_id: Faker::Number.between(1, product_count)
     )
 end
