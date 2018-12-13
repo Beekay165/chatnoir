@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     
     resources :products
     resources :orders
-    # resources :users
-    # resources :product
+    resources :categories
+    resources :users
+    resources :product
+    resources :variants
   end
 end

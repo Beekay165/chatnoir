@@ -1,0 +1,22 @@
+<% title "Create New " + @category.name %>
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Add
+                    <%= @category.name %>
+                </h4>
+                <p class="card-description">
+                    Use the form below to add information about the
+                    <%= @category.name %>
+                </p>
+
+                <%= form_for [:admin, @category], class: "forms-sample" do |f| %>
+                <%= render "admin/categories/partials/form", :f => f %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+
+    <%= render "admin/categories/partials/errors" %>
+</div>

@@ -29,69 +29,7 @@
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
       <!-- partial:partials/_sidebar.html -->
-      <nav class="sidebar sidebar-offcanvas" id="sidebar">
-        <ul class="nav">
-          <li class="nav-item nav-profile">
-            <div class="nav-link">
-              <div class="user-wrapper">
-                <div class="profile-image">
-                  <%= image_tag('faces/face1') %>
-                </div>
-                <div class="text-wrapper">
-                  <p class="profile-name">{user name}</p>
-                  <div>
-                    <small class="designation text-muted">Administrator</small>
-                    <span class="status-indicator online"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <%= link_to admin_dashboard_path, class: "nav-link" do %>
-            <i class="menu-icon mdi mdi-television"></i>
-            <span class="menu-title">Dashboard</span>
-            <% end %>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#products" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Products</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="products">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <%= link_to "Index", admin_products_path, class: "nav-link" %>
-                </li>
-                <li class="nav-item">
-                  <%= link_to "Add Product", new_admin_product_path, class: "nav-link" %>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#orders" aria-expanded="false" aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-content-copy"></i>
-              <span class="menu-title">Orders</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="orders">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                  <%= link_to "Index", admin_orders_path, class: "nav-link" %>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
-              <i class="menu-icon mdi mdi-backup-restore"></i>
-              <span class="menu-title">Form elements</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <%= render "admin/dashboard/partials/sidebar" %>
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
