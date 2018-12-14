@@ -1,0 +1,17 @@
+<% if @product.errors.any? %>
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title .text-warning">Errors</h4>
+            <p>Please fix any errors outlined below and re-submit your product</p>
+            <ul class="list-arrow">
+                <% @product.errors.full_messages.each do |msg| %>
+                <li>
+                    <%= msg %>
+                </li>
+                <% end%>
+            </ul>
+        </div>
+    </div>
+</div>
+<% end %>

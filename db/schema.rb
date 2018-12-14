@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_14_090515) do
+
+ActiveRecord::Schema.define(version: 2018_12_13_210638) do
+
 
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
@@ -53,16 +55,12 @@ ActiveRecord::Schema.define(version: 2018_12_14_090515) do
   end
 
   create_table "product_variants", force: :cascade do |t|
-    t.string "variant", null: false
-    t.text "description"
-    t.decimal "price", precision: 10, scale: 2, null: false
-    t.integer "stock", null: false
-    t.string "image"
-    t.string "sku"
+    t.integer "product_id", null: false
+    t.integer "variant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "product_id"
     t.index ["product_id"], name: "index_product_variants_on_product_id"
+    t.index ["variant_id"], name: "index_product_variants_on_variant_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -77,6 +75,17 @@ ActiveRecord::Schema.define(version: 2018_12_14_090515) do
     t.datetime "updated_at", null: false
   end
 
+
+  create_table "variants", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "option"
+    t.decimal "price", precision: 10, scale: 2, null: false
+    t.integer "stock", null: false
+    t.string "image"
+    t.string "sku"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -90,6 +99,7 @@ ActiveRecord::Schema.define(version: 2018_12_14_090515) do
     t.string "lastname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
   end
 
 end

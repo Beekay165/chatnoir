@@ -1,20 +1,20 @@
-<% title "Edit " + @product.name  %>
+<% title "Edit " + @variant.name  %>
 <div class="col-md-6 grid-margin stretch-card">
   <div class="card">
     <div class="card-body">
       <h4 class="card-title">
         Edit
-        <%= @product.name %>
+        <%= @variant.name %>
       </h4>
       <p class="card-description">
         Use the form below to edit information about the
-        <%= @product.name %>
+        <%= @variant.name %>
       </p>
-      <%= form_for [:admin, @product], class: "forms-sample" do |f| %>
-      <%= render "admin/products/partials/form", :f => f %>
+      <%= form_for [:admin, @variant], class: "forms-sample" do |f| %>
+      <%= render "admin/variants/partials/form", :f => f %>
       <% end %>
     </div>
   </div>
 
-  <%= render "admin/products/partials/errors" %>
+  <%= render "admin/variants/partials/errors" %>
 </div>

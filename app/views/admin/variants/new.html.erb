@@ -1,0 +1,19 @@
+<% title "Create New Variant" %>
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Add Variant</h4>
+        <p class="card-description">
+          Use the form below to add information about the variant
+        </p>
+
+        <%= form_for [:admin, @variant], class: "forms-sample" do |f| %>
+        <%= render "admin/variants/partials/form", :f => f %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <%= render "admin/variants/partials/errors" %>
+</div>

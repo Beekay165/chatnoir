@@ -1,5 +1,7 @@
 # Inherit directly from ActionController::Base rather than ApplicationController to ensure clean separation
 class Admin::BaseController < ActionController::Base
+    protect_from_forgery
+    
     # use an admin-specific layout instead of the main application layout
     layout "admin"
     

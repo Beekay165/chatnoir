@@ -1,3 +1,4 @@
 class ProductVariant < ApplicationRecord
-    validates :variant, :price, :stock, presence: true
+  belongs_to :product
+  belongs_to :variant
 end
