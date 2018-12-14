@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\db",
+    "\\db\\migrate"
+  ],
+  "SelectedNode": "\\db\\migrate\\20181214004026_add_admin_to_users.rb",
+  "PreviewInSolutionExplorer": false
+}
