@@ -9,11 +9,13 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
+//
 //= require active
 //= require popper.min
 //= require jquery-2.2.4.min
 //= require classy-nav.min
 //= require bootstrap.min
+//
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
