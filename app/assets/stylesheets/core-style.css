@@ -1741,5 +1741,69 @@ img {
             color: #0315ff; }
 
 /* ##### The End ##### */
+.user-login-info .dropbt {
+    cursor: pointer;
+    height: 85px;
+}
 
+.user-login-info .drop {
+    position: relative;
+    display: inline-block;
+}
+
+.user-login-info .drop-content {
+    display: none;
+    position: absolute;
+    min-width: 110px;
+    box-shadow: 0 1px 5px rgba(0,0,0,.1);
+    z-index: 11;
+    left: 0;
+    padding: 10px 0;
+    background-color: white;
+    margin-top: -15px;
+}
+
+    .user-login-info .drop-content a {
+        min-width: 110px;
+        color: #787878;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .user-login-info .drop-content a:first-child {
+            border-bottom: 1px solid rgba(242,244,248,.7);
+        }
+
+        .user-login-info .drop-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.user-login-info .drop:hover .drop-content {
+    display: block;
+}
+
+.header_area .user-login-info a {
+    height: 85px;
+}
+
+.header_area .user-login-info .drop-content a {
+    height: 35px;
+    line-height: 20px;
+    width: 100%;
+    border-left: none;
+    text-align: left;
+}
+
+/*# for forms */
+.forforms {
+    width: 65%;
+    margin:0 auto;
+}
+@media only screen and (max-width: 600px) {
+    .forforms {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
 /*# sourceMappingURL=core-style.css.map */
