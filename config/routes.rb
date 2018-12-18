@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'pages/about'
-  devise_for :users
+
+  devise_for :users, controllers: { confirmations: 'confirmations' }
   devise_scope :user do
   get '/users/sign_out' => 'devise/sessions#destroy'
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
    root "home#index"
    get  '/about', to: 'pages#about'
+   get  '/products', to: 'products#index'
+   get  '/products/show/:id', to: 'products#show'
+   get  '/posters', to: 'products#poster'
+   get  '/illustrations', to: 'products#illustration'
+   get  '/woodblocks', to: 'products#woodblock'
   # namespace for admin routes
   namespace :admin do
     # admin dashboard route
@@ -19,6 +24,8 @@ Rails.application.routes.draw do
     resources :product
     resources :variants
   end
+  
+
 end
 
 

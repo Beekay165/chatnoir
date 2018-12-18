@@ -1,19 +1,23 @@
 /* [Master Stylesheet v-1.0.0] */
 /* :: 1.0 Import Web Fonts */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Ubuntu:300,400,500,700");
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 /* :: 2.0 Import All CSS */
 * {
   margin: 0;
   padding: 0; }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  background-color: #ffffff;
-  margin-top: 85px; }
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+    margin-top: 85px;
+}
   @media only screen and (max-width: 767px) {
     body {
       margin-top: 80px; } }
+
 
 h1,
 h2,
@@ -21,10 +25,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000000;
-  line-height: 1.3;
-  font-weight: 700;
-  font-family: "Ubuntu", sans-serif; }
+    color: #000000;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: "Ubuntu", sans-serif;
+}
 
 p {
   color: #787878;
@@ -1047,7 +1052,7 @@ img {
   position: relative;
   z-index: 1;
   background-color: #252525;
-  padding: 70px 0 60px; }
+  padding: 40px 0 30px; }
   .footer_area .single_widget_area .footer_menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1799,6 +1804,18 @@ img {
 .forforms {
     width: 65%;
     margin:0 auto;
+}
+
+.categories_container {
+    width:100%;
+}
+.nav-brand, .footer-logo .nav-brand2 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.footer-logo .nav-brand2 {
+    color: white;
+    font-size: 20px;
 }
 @media only screen and (max-width: 600px) {
     .forforms {

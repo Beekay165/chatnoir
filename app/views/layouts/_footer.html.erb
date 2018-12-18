@@ -7,21 +7,25 @@
                 <div class="col-12 col-md-6">
                     <div class="single_widget_area d-flex mb-30">
                         <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="#" style="color:white;font-size:18px;">ChatNoir</a>
+                        <div class="footer-logo mr-50 nav-brand2"><%= link_to "ChatNoir", root_path, style:"color:white; font-size: 18px;font-family: 'Julius Sans One', sans-serif;"%>
                         </div>
                         <!-- Footer Menu -->
                         <div class="footer_menu">
-                            <ul>
-                                <li><a href="#">Shop</a></li>
-                                 <li><%= link_to "About", about_path%></li>
-                                <li><a href="#">Contact</a></li>
+                            <ul >
+                                <li >
+                                  <%= link_to "Shop", products_path%>
+                                </li>
+                              <li>
+                                <%= link_to "About", about_path%>
+                              </li>
+                              <li>
+                                <%= link_to "Contact", '#' %>
+                              </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="row align-items-end">
                 <!-- Single Widget Area -->
                 <div class="col-12 col-md-6">
@@ -37,24 +41,24 @@
                 </div>
             </div>
 
-     <div class="row mt-5">
+     <div class="row">
                 <div class="col-md-12 text-center">
-                    <p>
+                    <p style ="margin-bottom:0; margin-top:20px">
     Copyright &copy;<script>document.write(new Date().getFullYear());</script> ChatNoir 
                     </p>
                 </div>
             </div>
         </div>
         <!-- jQuery (Necessary for All JavaScript Plugins) -->
-    <script src="../assets/jquery-2.2.4.min.js"></script>
+    <script src="../../assets/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="../assets/popper.min.js"></script>
+    <script src="../../assets/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="../assets/bootstrap.min.js"></script>
+    <script src="../../assets/bootstrap.min.js"></script>
     <!-- Plugins js -->
-    <script src="../assets/plugins.js"></script>
+    <script src="../../assets/plugins.js"></script>
     <!-- Classy Nav js -->
-    <script src="../assets/classy-nav.min.js"></script>
+    <script src="../../assets/classy-nav.min.js"></script>
     <!-- Active js -->
-    <script src="../assets/active.js"></script>
+    <script src="../../assets/active.js"></script>
     </footer>

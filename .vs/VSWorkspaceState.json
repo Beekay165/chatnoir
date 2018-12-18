@@ -4,6 +4,6 @@
     "\\db",
     "\\db\\migrate"
   ],
-  "SelectedNode": "\\db\\migrate\\20181214004026_add_admin_to_users.rb",
+  "SelectedNode": "\\db\\migrate\\20181216021140_add_confirmable_to_devise.rb",
   "PreviewInSolutionExplorer": false
 }

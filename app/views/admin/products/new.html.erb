@@ -1,4 +1,4 @@
-<% title "Create New Product" %>
+<% content_for :title, "Create new product" %>
 <div class="row">
   <div class="col-md-6 grid-margin stretch-card">
     <div class="card">
@@ -7,7 +7,6 @@
         <p class="card-description">
           Use the form below to add information about the product
         </p>
-
         <%= form_for [:admin, @product], class: "forms-sample" do |f| %>
         <%= render "admin/products/partials/form", :f => f %>
         <% end %>
