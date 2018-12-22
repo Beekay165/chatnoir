@@ -13,6 +13,7 @@ Rails.application.routes.draw do
    get  '/posters', to: 'products#poster'
    get  '/illustrations', to: 'products#illustration'
    get  '/woodblocks', to: 'products#woodblock'
+   get '/search' => 'products#search'
   # namespace for admin routes
   namespace :admin do
     # admin dashboard route

@@ -13,4 +13,12 @@ class Product < ApplicationRecord
     # association with variants through our join table product_variants
     has_many :product_variants, dependent: :delete_all
     has_many :variants, through: :product_variants
+
+	def self.search(pattern, id)
+    if pattern.blank?  # blank? covers both nil and empty string
+      all
+    else
+      where('name LIKE ? or description LIKE ? or artist_name LIKE ?', "%#{pattern}%", "%#{pattern}%", "%#{pattern}%")
+    end
+    end
 end

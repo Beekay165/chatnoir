@@ -1,9 +1,20 @@
 {
   "ExpandedNodes": [
     "",
-    "\\db",
-    "\\db\\migrate"
+    "\\app",
+    "\\app\\views",
+    "\\app\\views\\layouts",
+    "\\app\\views\\products",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\summernote",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins\\fullpage",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins\\toc",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\themes",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\themes\\inlite"
   ],
-  "SelectedNode": "\\db\\migrate\\20181216021140_add_confirmable_to_devise.rb",
+  "SelectedNode": "\\app\\views\\products\\search.html.erb",
   "PreviewInSolutionExplorer": false
 }

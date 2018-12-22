@@ -44,4 +44,17 @@ for item in productsID
 end
 end
 
+def search
+
+ @searchProducts = Product.search(params[:q], params[:id])
+    respond_to do |format|
+      format.html 
+      format.json { render json: @searchProducts }
+    end
+@productsFromSearch = @searchProducts.count
+if @productsFromSearch==0
+redirect_to search_path, info: "No items match this search, try searching by category or browse through the products below"
+end
+end
+
 end
