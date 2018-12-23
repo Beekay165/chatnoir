@@ -5,16 +5,11 @@
     "\\app\\views",
     "\\app\\views\\layouts",
     "\\app\\views\\products",
+    "\\config",
     "\\StarAdmin-Free-Bootstrap-Admin-Template-master",
     "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors",
     "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\summernote",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins\\fullpage",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\plugins\\toc",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\themes",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce\\themes\\inlite"
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce"
   ],
-  "SelectedNode": "\\app\\views\\products\\search.html.erb",
   "PreviewInSolutionExplorer": false
 }
