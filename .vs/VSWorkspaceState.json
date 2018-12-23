@@ -6,10 +6,11 @@
     "\\app\\views\\layouts",
     "\\app\\views\\products",
     "\\config",
+    "\\config\\environments",
     "\\StarAdmin-Free-Bootstrap-Admin-Template-master",
     "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\summernote",
-    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\tinymce"
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\summernote"
   ],
+  "SelectedNode": "\\Gemfile",
   "PreviewInSolutionExplorer": false
 }
