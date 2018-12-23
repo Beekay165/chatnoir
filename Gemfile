@@ -79,4 +79,6 @@ gem 'devise', '~> 4.5'
 gem 'ast', '~> 2.4'
 #asset pipeline
 gem 'rails_12factor', group: :production
+#to run devise on Heroku
+gem 'bcrypt'
 
