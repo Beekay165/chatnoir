@@ -17,18 +17,16 @@
                     <!-- Nav Start -->
                     <div class="classynav">
                         <ul>
-                            <li><a href="#">Shop</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">Posters</a></li>
-                                    <li><a href="#">Illustrations</a></li>
-                                    <li><a href="#">Woodblock Prints</a></li>
-                                </ul>
-                            </li>
-                          
+                          <!-- left this as an html link because of styling/classy-nav, bootstrap-->
+                          <li>
+                            <a href ="/products">Shop</a>
+                            <ul class="dropdown">
+                            <li><%= link_to "Posters", posters_path%></li>
+                            <li><%= link_to "Illustrations", illustrations_path%></li>
+                            <li><%= link_to "Woodblock Prints", woodblocks_path%></li>
+                              </ul>
                             <li><%= link_to "About", about_path%></li>
                             <li><%= link_to "Contact", '#' %></li>
-                         
-                          
                         </ul>
                     </div>
                     <!-- Nav End -->
@@ -37,12 +35,13 @@
             <!-- Header Meta Data -->
             <div class="header-meta d-flex clearfix justify-content-end">
                 <!-- Search Area -->
-            
                 <div class="search-area">
-                    <form action="#" method="post">
-                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
+                  <%= form_tag("/search", method: "get") do %>
+                  <%= text_field_tag(:q) %>
+                  <button type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                  <% end %>
                 </div>
                 <!-- User Login Info -->
               
@@ -50,6 +49,7 @@
                   <div class="drop">
                       <a class="dropbt href="#"><%= image_tag "core-img/user.svg" %></a>
                         <div class="drop-content">
+                          
                           <!-- if the current user is logged in and an admin they will be able to access the dashboard-->
                           <%if current_user && current_user.admin?%>
                             <%= link_to "Dashboard", admin_dashboard_path %>

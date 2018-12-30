@@ -1,9 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\db",
-    "\\db\\migrate"
+    "\\app",
+    "\\app\\views",
+    "\\app\\views\\layouts",
+    "\\app\\views\\products",
+    "\\config",
+    "\\config\\environments",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors",
+    "\\StarAdmin-Free-Bootstrap-Admin-Template-master\\vendors\\summernote"
   ],
-  "SelectedNode": "\\db\\migrate\\20181214004026_add_admin_to_users.rb",
+  "SelectedNode": "\\Gemfile",
   "PreviewInSolutionExplorer": false
 }

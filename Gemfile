@@ -1,12 +1,19 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
+ruby '2.4.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -60,7 +67,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem 'chromedriver-helper', '1.2.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -74,5 +81,11 @@ group :development do
   gem 'rubocop'
 end
 
-gem 'wdm', '>= 0.1.0'
+#gem 'wdm', '>= 0.1.0'
 gem 'devise', '~> 4.5'
+gem 'ast', '~> 2.4'
+#asset pipeline
+gem 'rails_12factor', group: :production
+#to run devise on Heroku
+gem 'bcrypt'
+

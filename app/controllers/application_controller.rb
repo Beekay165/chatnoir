@@ -1,15 +1,16 @@
 class ApplicationController < ActionController::Base
-
-  
+ 
 protect_from_forgery with: :exception
 
-  
    before_action :configure_permitted_parameters, if: :devise_controller?
-   #for edit user to work/use .for for olers ruby versions and .permit for newer(2.4)
+   #for edit user to work/use .for for older ruby versions and .permit for newer
     protected
         def configure_permitted_parameters
             devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:name, :email, :password) }
             devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:firstname,:lastname, :email, :password, :current_password) }
         end
 
+	add_flash_types :danger, :info, :warning, :success
 end
+
+
