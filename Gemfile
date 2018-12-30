@@ -81,7 +81,7 @@ group :development do
   gem 'rubocop'
 end
 
-gem 'wdm', '>= 0.1.0'
+#gem 'wdm', '>= 0.1.0'
 gem 'devise', '~> 4.5'
 gem 'ast', '~> 2.4'
 #asset pipeline
